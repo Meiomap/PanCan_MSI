@@ -1,0 +1,45 @@
+
+rename_ct = function(d = d){
+d$cancertype[d$cancertype=="Uterine Corpus Endometrial Carcinoma"] = "Endometrial cancer"
+d$cancertype[d$cancertype=="Double primary Endometrial and Ovarian "] = "Endometrial cancer"
+
+d$cancertype[d$cancertype=="Uterus Probably Endometrium"] = "Endometrial cancer"
+d$cancertype[d$cancertype=="Vulva Squamous cell carcinoma in the vagina"] = "Vulva Cancer"
+d$cancertype[d$cancertype=="Vulva Vagina"] = "Vulva Cancer"
+d$cancertype[grep(pattern = "Unknown", d$cancertype)] = "Unknown primary"
+d$cancertype[grep(pattern = "NET", d$cancertype)] = "Neuroendocrine tumors"
+d$cancertype[grep(pattern = "Urinary tract", d$cancertype)] = "Urinary tract cancer"
+d$cancertype[grep(pattern = "Skin", d$cancertype)] = "Skin cancer"
+d$cancertype[grep(pattern = "Prostate", d$cancertype)] = "Prostate cancer"
+d$cancertype[grep(pattern = "Pancreatic|Pancreas", d$cancertype)] = "Pancreatic cancer"
+d$cancertype[grep(pattern = "Ovary|Ovarian", d$cancertype)] = "Ovarian cancer"
+d$cancertype[grep(pattern = "Lung", d$cancertype)] = "Lung cancer"
+d$cancertype[grep(pattern = "Liver", d$cancertype)] = "Liver cancer"
+d$cancertype[grep(pattern = "Kidney", d$cancertype)] = "Kidney cancer"
+d$cancertype[grep(pattern = "Head and neck|Head and Neck", d$cancertype)] = "Head and neck cancer"
+d$cancertype[grep(pattern = "Gastric", d$cancertype)] = "Gastric cancer"
+d$cancertype[grep(pattern = "Esophagus|Esophageal", d$cancertype)] = "Esophagus cancer"
+d$cancertype[grep(pattern = "Colorectal|Colon", d$cancertype)] = "Colon cancer"
+d$cancertype[grep(pattern = "CNS", d$cancertype)] = "CNS cancer"
+d$cancertype[grep(pattern = "Kidney", d$cancertype)] = "Kidney cancer"
+d$cancertype[d$cancertype=="Breast ER+ and HER2"] = "Breast ER-positive/HER2-positive"
+d$cancertype[d$cancertype=="Breast Subtype unknown"] = "Breast Cancer"
+d$cancertype[d$cancertype=="Breast ER-positive/HER2 unknown"] = "Breast Cancer"
+
+d$cancertype[grep(pattern = "Breast", d$cancertype)] = "Breast cancer"
+d$cancertype[grep(pattern = "Uterus Endometrial", d$cancertype)] = "Endometrial cancer"
+d$cancertype[grep(pattern = "Stomach", d$cancertype)] = "Gastric cancer"
+d$cancertype[grep(pattern = "Bone/Soft tissue|Bone", d$cancertype)] = "Bone/Soft tissue cancer"
+d$cancertype[grep(pattern = "Biliary", d$cancertype)] = "Biliary cancer"
+d$cancertype[grep(pattern = "Adrenal", d$cancertype)] = "Adrenal cancer"
+d$cancertype[grep(pattern = "Small intestine", d$cancertype)] = "Small intestine cancer"
+d$cancertype[grep(pattern = "Leukemia", d$cancertype)] = "Leukemia"
+d$cancertype[grep(pattern = "Lymphoid", d$cancertype)] = "Lymphoid cancer"
+d$cancertype[grep(pattern = "Stomach", d$cancertype)] = "Stomach cancer"
+d$cancertype[grep(pattern = "Myeloid", d$cancertype)] = "Myeloid disorders"
+d$cancertype[grep(pattern = "Brain|CNS", d$cancertype)] = "Brain/CNS cancer"
+d$cancertype[grep(pattern = "Cervical", d$cancertype)] = "Cervical cancer"
+
+return(d)
+}
+
